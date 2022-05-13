@@ -1,5 +1,6 @@
 :root {
     --mainFont: Helvetica, sans-serif;
+    --bgColor: #F1F5f8;
 }
 
 html {
@@ -18,5 +19,62 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--mainFont);
+    background-color: var(--bgColor);
+    min-width: 36rem;
+}
+
+.container {
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.counter-title {
+    font-size: 3rem;
+}
+
+.counter {
+    font-size: 12rem;
+    margin-top: -4rem;
+    margin-bottom: -1rem;
+}
+
+.counter-controls {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.decrease,
+.increase,
+.reset {
+    font-size: 2.5rem;
+    text-align: center;
+    border: black solid;
+    border-radius: 3rem;
+    padding: .5rem 2rem;
+    background-color: none;
+    color: black;
+    cursor: pointer;
+}
+
+.decrease:hover,
+.increase:hover,
+.reset:hover {
+    color: white;
+}
+
+.decrease:hover {
+    background-color: tomato;
+}
+
+.increase:hover {
+    background-color: forestgreen;
+}
+
+.reset:hover {
     background-color: cornflowerblue;
 }
