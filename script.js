@@ -6,27 +6,24 @@ const reset = document.querySelector('.counter-controls .reset');
 let count = 0;
 
 decrease.addEventListener('click', () => {
-    count = decreaseCount(count);
+    count--;
     counter.innerHTML = count.toString();
     counter.style.color = setColor(count);
     console.log(count);
 });
 increase.addEventListener('click', () => {
-    count = increaseCount(count);
+    count++;
     counter.innerHTML = count.toString();
     counter.style.color = setColor(count);
     console.log(count);
 });
 reset.addEventListener('click', () => {
-    count = resetCount(count);
+    count = 0;
     counter.innerHTML = count.toString();
     counter.style.color = setColor(count);
     console.log(count);
 });
 
-function increaseCount(current) {return current + 1}
-function decreaseCount(current) {return current - 1}
-function resetCount() {return 0}
 function setColor(current) { 
     return (current > 0) ? "#30bf64" : ((current < 0) ? "#ff3d3d" : "#000000");
 }
